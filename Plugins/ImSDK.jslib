@@ -2931,7 +2931,7 @@ var ImSDKPlugin = {
       return;
     }
     var param = JSON.parse(UTF8ToString(json_modify_self_user_profile_param));
-  }
+  },
 
   TIMFriendshipGetFriendProfileList: function TIMFriendshipGetFriendProfileList(cb, user_data) {
     if (!utils.isInit) {
@@ -4154,7 +4154,7 @@ var ImSDKPlugin = {
     };
     callback.onUserStatusUpdated = onUserStatusUpdated;
     tim.on(TIM.EVENT.USER_STATUS_UPDATED, callback.onUserStatusUpdated);
-  }
+  },
 
   TIMSetUserInfoChangedCallback: function TIMSetUserInfoChangedCallback(cb,user_data){
     if (!utils.isInit) {
@@ -4184,8 +4184,8 @@ var ImSDKPlugin = {
         if(item.profileCustomField){
           resitem.user_profile_custom_string_array = item.profileCustomField.map(function(cf){
             return {
-              user_profile_custom_string_info_key = cf.key,
-              user_profile_custom_string_info_value = cf.value
+              user_profile_custom_string_info_key : cf.key,
+              user_profile_custom_string_info_value : cf.value
             };
           });
         }
